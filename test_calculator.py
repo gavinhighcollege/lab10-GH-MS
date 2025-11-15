@@ -1,5 +1,6 @@
 import unittest
-from calculator import *
+import math
+import calculator
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -52,5 +53,30 @@ class TestCalculator(unittest.TestCase):
     ##########################
 
 # Do not touch this
+        def test_multiply(self):
+            self.assertEqual(calculator.multiply(3, 4), 12)
+            self.assertEqual(calculator.multiply(-2, 5), -10)
+
+        def test_divide(self):
+            self.assertAlmostEqual(calculator.divide(10, 2), 5)
+            with self.assertRaises(ZeroDivisionError):
+                calculator.divide(10, 0)
+
+        def test_log_invalid_argument(self):
+            with self.assertRaises(ValueError):
+                calculator.logarithm(-2, 10)
+            with self.assertRaises(ValueError):
+                calculator.logarithm(10, -2)
+
+        def test_hypotenuse(self):
+            self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5)
+            self.assertAlmostEqual(calculator.hypotenuse(5, 12), 13)
+
+        def test_sqrt(self):
+            self.assertAlmostEqual(calculator.square_root(9), 3)
+            with self.assertRaises(ValueError):
+                calculator.square_root(-1)
+
+
 if __name__ == "__main__":
     unittest.main()
