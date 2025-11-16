@@ -36,9 +36,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.mul(-2, 5), -10)
 
     def test_divide(self):
-        self.assertAlmostEqual(calculator.div(10, 2), 5)
+        self.assertAlmostEqual(calculator.div(2, 10), 5)
         with self.assertRaises(ZeroDivisionError):
-            calculator.div(10, 0)
+            calculator.div(0, 10)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
