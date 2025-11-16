@@ -23,6 +23,11 @@ def div(a, b):
         raise ZeroDivisionError("Cannot divide by zero")
     return b / a
 
+def divide(a, b):
+    if a == 0:
+        raise ZeroDivisionError("Cannot divide by zero")
+    return b / a
+
 def log(a, b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Invalid base or argument for logarithm")
