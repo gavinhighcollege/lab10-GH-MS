@@ -1,3 +1,7 @@
+#https://github.com/gavinhighcollege/lab10-GH-MS
+#Partner 1: Gavin High
+#Partner 2: Mikel Salomon
+
 import unittest
 import math
 import calculator

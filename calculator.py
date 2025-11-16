@@ -1,9 +1,3 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
 #https://github.com/gavinhighcollege/lab10-GH-MS
 #Partner 1: Gavin High
 #Partner 2: Mikel Salomon
@@ -17,6 +11,10 @@ def add(a, b):
 def sub(a, b):
     return a - b
 
+def subtract(a, b):      # REQUIRED NAME
+    return sub(a, b)
+
+
 def mul(a, b):
     return a * b
 
@@ -29,6 +27,9 @@ def log(a, b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Invalid base or argument for logarithm")
     return math.log(b, a)
+
+def logarithm(a, b):     # REQUIRED NAME
+    return log(a, b)
 
 def exp(a, b):
     return a ** b
